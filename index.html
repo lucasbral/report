@@ -1,83 +1,87 @@
 <!doctype html>
-<html lang="en">
+<html lang="PT-BR">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>Dashboard</title>
-
-<link href="bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <meta name="author" content="Lucas Sobral">
+    <title>Amanaci - Clima</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="index.css" rel='stylesheet' />
+    <link rel="icon"href="amanaci_sf.png">
   </head>
-  <body>
-    
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
-    <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
-    Amanaci Solução de Dados
-  </a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  </div>
-</header>
 
-<div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="position-sticky pt-3 sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <span data-feather="home" class="align-text-bottom"></span>
-              Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file" class="align-text-bottom"></span>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users" class="align-text-bottom"></span>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers" class="align-text-bottom"></span>
-              Integrations
-            </a>
-          </li>
-        </ul>
+  
+  <body>
+    <header class="topo">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid " >
+              <a class="navbar-brand" href="#">
+                <img src="amanaci_sf.png" width="100" height="100" class="d-inline-block align-text-top">
+              </a>
+              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button> -->
+              <h1 class="titulo">Análise dos Indicadores Climáticos do Brasil</h1>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                    <li>
+                      <a data-bs-toggle="modal" data-bs-target="#Modal" class ="nav-link"href="#modal">.</a></li>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-e">
+        <div class="row">
+            <div class="col-lg-9">
+            <div class="container_iframe">
+              <iframe width="1200" height="900" src="https://datastudio.google.com/embed/reporting/c2c0450c-cb49-41c3-b6a3-7859eba30435/page/9ABCD" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="container">
+                  <h2>Descrição da Análise</h2>
+                  <p class="lh-1">
+                    O projeto consiste em uma análise dos indicadores climáticos do Brasil, extraindo dados das fontes originais, 
+                    é feito o carregamento em ambientes da Google Cloud Plataform, a correta manipulação dos dados com o uso de bibliotecas python 
+                    e o devido envio dos dados tratados novamente para ambientes da GCP. 
+                    Com esses dados tratados é feito as análises disponibilizadas neste site.
+                  </p>
+                  <h2>Fonte dos dados</h2>
+                  <p class="lh-sm">
+                    Os dados de climas são disponibilizados pelo INMET e estão disponíveis no BDMEP. Referem-se a estações de medições automáticas 
+                    espalhadas por todo o Brasil.
+                  </p>
+                  <h2>Acesso ao Web Server</h2>
+                  <img src="qrcode.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="150%" height="150%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></img>
+
+            </div>
+            </div>
+        </div>
+       <!-- Modal -->
+       <div class="modal fade" id="Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Apresentação</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col">
+                <div class="container-3">
+                  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vThWScR0d2dGpIfa6ZEzE-EDHk_RPbzdfFFEfo_wew3Jm-qqwOxcebRAzLuCayh533omXxwNB6R7Fwo/embed?start=false&loop=false&delayms=0" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="container">
-        <iframe class = "iframe" src="https://datastudio.google.com/embed/reporting/c10913b6-556a-4a33-a9d0-695545ce187f/page/3ySAD" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </main>
-  </div>
-</div>
-    <script src="bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+    </div>
+        <script src="bootstrap.bundle.min.js"></script>
   </body>
 </html>

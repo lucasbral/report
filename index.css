@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.nav-item {
+    list-style-type: none;
+    font-family:'Montserrat';
+    border-radius: 15%;
+    background-color: #f8f8f8;
+    margin-left: 1rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    font-size:xx-large
+}
+
+.topo{
+  height: 10rem;
+  width: 100%;
+}
+
+.topo .navbar .container-fluid .titulo{
+    font-family:'Montserrat';
+    color: #0f9fb6;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-size: 50px;
+
+}
+
+.topo .navbar .container-fluid .navbar-collapse{
+  display:flex; 
+  justify-content: flex-end;
+  flex-grow:inherit;
+}
+
+.navbar {
+    background: #dfe0df;
+    height: 100%;
+    width:100%;
+}
+
+
+.navbar-brand-titulo {
+    color: #0f9fb6;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20rem;
+    text-align: center;
+}
+
+
+iframe, object, embed {
+    max-width: 100%;
+}
+.container_iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+  
+  @media (max-width: 62em) {
+    .container_iframe {
+        position: absolute;
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        height: 0;
+      }
+    .iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .nav-item {
+        list-style-type: none;
+        font-family:'Montserrat';
+        border-radius: 2%;
+        background-color: #f8f8f8;
+        font-size:small;
+    }
+    .topo .navbar .container-fluid .titulo{
+        font-family:'Montserrat';
+        color: #0f9fb6;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: solid;
+        font-size: 15px;
+    
+    }
+  }
+
+.iframe {
+    
+    top: 0;
+    left: 0;
+    
+  }
+
+  h2 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #61BFCE;
+    margin-bottom: 10px;
+  }
+.container {
+    padding-top: 25px;
+    text-align: left;
+    text-shadow: 0ch;
+    padding-right: 50px;
+    padding-left: 25px;
+}
+
+p {
+    text-align: left;
+    font-family: "Segoe UI";
+    color: #5C5C5C;
+  }
+
+
